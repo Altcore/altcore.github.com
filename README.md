@@ -1,2 +1,0 @@
-altcore.github.com
-==================
