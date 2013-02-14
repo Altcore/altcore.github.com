@@ -1,0 +1,214 @@
+@font-face{
+    font-family: 'Museo-500';
+    src: url('../webfonts/eot/museo500.eot');
+    src: url('../webfonts/woff/museo500.woff') format('woff'),
+         url('../webfonts/ttf/museo500.ttf') format('truetype'),
+         url('../webfonts/museo500.svg#Museo-500') format('svg');
+}
+@font-face{
+    font-family: 'MuseoSans-500';
+    src: url('../webfonts/eot/museosans500.eot');
+    src: url('../webfonts/woff/museosans500.woff') format('woff'),
+         url('../webfonts/ttf/museosans500.ttf') format('truetype'),
+         url('../webfonts/museosans500.svg#MuseoSans-500') format('svg');
+}
+/* Clarendon-Light webfont (new-bulletproof) */ 
+@font-face {
+    font-family: 'Clarendon-Light';
+    src: url('Clarendon-Light.eot?#iefix') format('embedded-opentype'),
+         url('Clarendon-Light.woff') format('woff'),
+         url('Clarendon-Light.ttf')  format('truetype'),
+         url('Clarendon-Light.svg#webfont') format('svg');
+}
+
+
+.logo {margin: 80px 0 0 30px;
+}
+
+.intro {
+    font: 130px 'Clarendon-Light';
+    margin: 40px 0 60px 60px;
+    letter-spacing: 6px;
+}
+
+
+body { 
+	margin: 0; 
+	background-image: url(../img/bg.png); 
+	background-color: #fff;
+	font: 15px/22px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	line-height: 1.5;
+}
+.column{
+	padding: 0 auto;
+	background: url('../img/verticle-line.png') repeat-y center top;
+	height:750px;	
+}
+    
+#horizontal-line-full{
+		background-image: url('../img/horizontal-line.png');
+		width: 780px;
+		height:2px;
+		margin: 0 0 25px;
+		
+}
+
+
+
+
+
+
+#recent_projects{
+    overflow: hidden;
+    width:940px;
+    margin: 60px auto 0;
+}
+#recent_projects h3{
+    font: 16px 'Museo-500', Helvetica, Arial, sans-serif;
+    margin: 0 0 35px 265px;
+    
+}
+#recent_projects p a{
+    font: 14px 'Museo-500', Helvetica, Arial, sans-serif;
+    text-align: left;
+    color: #e35e35;
+    margin: 0 0 0 15px;
+    padding: 6px 12px;
+    background: #fff;
+    border: 1px solid #ffbca4;
+    -webkit-transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    -o-transition: all 0.15s linear;
+    transition: all 0.15s linear;
+}
+#recent_projects p a:hover{
+    padding: 6px 18px;
+}
+#recent_projects p a:active{
+    color: #fff;
+    background: #e35e35;
+}
+#recent_projects li a{
+    display: block;
+    width: 140px;  height: 140px;
+}
+#recent_projects li{
+    float: left;  display: inline;
+    margin: 20px;
+}
+#recent_projects li{
+    float: left;  display: inline;
+    margin: 20px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    border-radius: 80px;
+}
+#recent_projects li{
+    float: left;  display: inline;
+    margin: 20px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    border-radius: 80px;
+    -webkit-transition: -webkit-border-radius 0.20s linear;
+    -moz-transition: -moz-border-radius 0.20s linear;
+    -o-transition: all 0.20s linear;
+    transition: border-radius 0.20s linear;
+}
+#recent_projects li:hover{
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+.item1{
+    background: url('../img/portfolio_item1.jpeg') 0 140px;
+}
+.item2{
+    background: url('../img/portfolio_item2.jpeg') 0 140px;
+}
+.item3{
+    background: url('../img/portfolio_item3.jpeg') 0 140px;
+}
+.item4{
+    background: url('../img/portfolio_item4.jpeg') 0 140px;
+}
+.item5{
+    background: url('../img/portfolio_item5.jpeg') 0 140px;
+}
+.item6{
+    background: url('../img/portfolio_item6.jpeg') 0 140px;
+}
+.item7{
+    background: url('../img/portfolio_item7.jpeg') 0 140px;
+}
+.item8{
+    background: url('../img/portfolio_item8.jpeg') 0 140px;
+}
+#recent_projects li:hover{
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    background-position: 0 0; /* This is what we just added */
+}
+
+
+
+
+
+footer{
+    clear:both;
+    width: 940px;
+    margin: 0 0 0 0;
+    padding: 0 0 50px 0;
+}
+footer nav{
+    font-size: 20px;
+     text-align: center;
+}
+footer a{
+    display: inline;
+    color: #ffbca4;
+   
+}
+footer a{
+    
+    display: inline;
+    color: #ffbca4;
+    margin: 0 0 0 30px;
+    padding: 5px 10px;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+footer a:hover{
+    padding: 10px 10px;
+    color: #fff;
+    background: #e35e35;
+}
+footer a:active{
+    color: #fff;
+    background: #454545;
+}
+footer p{
+    text-indent: 10px; 
+    color: #454545;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+}
+footer h2{font-size: 20px;
+    font: 16px 'Museo-500', Helvetica, Arial, sans-serif;
+    margin: 0 auto 0;
+text-align: center;}
+
+ ul.example
+    {
+        margin: 0.5em 0;
+        padding: 0 0 0 2em;
+    }
+    ul.example li
+    {
+        margin: 0.5em 0; padding: 0 0 0 20px;
+        list-style-type: none;
+        background: url('../img/li.gif') no-repeat 0 0.6em;
+    }
