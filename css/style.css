@@ -154,7 +154,7 @@ a{color: black;}
 font-family: 'foglihtenno06';
     overflow: hidden;
     width: 960px;
-    margin: 0 auto 0;
+    margin: 0 0 0 45px;
 }
 #my_projects p a {
     text-align:center;
