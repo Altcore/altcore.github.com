@@ -134,10 +134,13 @@ body {
     height: 2px;
     margin: 0 0 25px;
 }
+h1 { font-family: 'jurademibold',Helvetica,Arial,sans-serif;
+font-size: 130px; 
+}	
 h3 { font-family: 'jurademibold',Helvetica,Arial,sans-serif;
 font-size: 26px; 
 margin:0 0 20px o;
-}	
+}
 a{color: black;}
 .projects{text-align: center;
 	margin: 35px 0 0 0;
