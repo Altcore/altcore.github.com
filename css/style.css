@@ -93,7 +93,7 @@ input, select, button, textarea {
 
 .logo { margin: 69px 0 0 0px }
 .intro {
-    font-family: 'Clarendon-Light';
+    font-family: 'Clarendon-Light',Candara,Helvetica,Arial,sans-serif;
     font-size: 130px;
     margin: 35px 0 60px 60px;
     letter-spacing: 1px;
