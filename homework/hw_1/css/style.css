@@ -1,0 +1,262 @@
+@font-face {
+    font-family: 'PTSansRegular';
+    src: url('../fonts/PTS55F-webfont.eot');
+    src: url('../fonts/PTS55F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/PTS55F-webfont.woff') format('woff'),
+         url('../fonts/PTS55F-webfont.ttf') format('truetype'),
+         url('../fonts/PTS55F-webfont.svg#PTSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PTSansItalic';
+    src: url('../fonts/PTS56F-webfont.eot');
+    src: url('../fonts/PTS56F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/PTS56F-webfont.woff') format('woff'),
+         url('../fonts/PTS56F-webfont.ttf') format('truetype'),
+         url('../fonts/PTS56F-webfont.svg#PTSansItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PTSansBold';
+    src: url('../fonts/PTS75F-webfont.eot');
+    src: url('../fonts/PTS75F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/PTS75F-webfont.woff') format('woff'),
+         url('../fonts/PTS75F-webfont.ttf') format('truetype'),
+         url('../fonts/PTS75F-webfont.svg#PTSansBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PTSansBoldItalic';
+    src: url('../fonts/PTS76F-webfont.eot');
+    src: url('../fonts/PTS76F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/PTS76F-webfont.woff') format('woff'),
+         url('../fonts/PTS76F-webfont.ttf') format('truetype'),
+         url('../fonts/PTS76F-webfont.svg#PTSansBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PTSerifRegular';
+    src: url('../fonts/PTF55F-webfont.eot');
+    src: url('../fonts/PTF55F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/PTF55F-webfont.woff') format('woff'),
+         url('../fonts/PTF55F-webfont.ttf') format('truetype'),
+         url('../fonts/PTF55F-webfont.svg#PTSerifRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PTSerifItalic';
+    src: url('../fonts/PTF56F-webfont.eot');
+    src: url('../fonts/PTF56F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/PTF56F-webfont.woff') format('woff'),
+         url('../fonts/PTF56F-webfont.ttf') format('truetype'),
+         url('../fonts/PTF56F-webfont.svg#PTSerifItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PTSerifBold';
+    src: url('../fonts/PTF75F-webfont.eot');
+    src: url('../fonts/PTF75F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/PTF75F-webfont.woff') format('woff'),
+         url('../fonts/PTF75F-webfont.ttf') format('truetype'),
+         url('../fonts/PTF75F-webfont.svg#PTSerifBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'PTSerifBoldItalic';
+    src: url('../fonts/PTF76F-webfont.eot');
+    src: url('../fonts/PTF76F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/PTF76F-webfont.woff') format('woff'),
+         url('../fonts/PTF76F-webfont.ttf') format('truetype'),
+         url('../fonts/PTF76F-webfont.svg#PTSerifBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.clearfix:after {
+    clear: both;
+}
+
+/*___________________________________________________________________*/
+
+body{
+	background: url(../img/background.gif) repeat;
+}
+.headline{
+    border: 3px solid #000;
+    margin: 0;
+}
+.head{
+    width: 100%;   
+}
+.left{
+    float:left;
+    margin-top: 15px;
+    margin-left: 12px;
+    text-transform: uppercase;
+    font: 24px PTSansBold;
+}
+
+.right{ float: right;
+    margin-top: 15px;
+    margin-right: 12px;
+}
+.log{
+	text-decoration: none;
+	font: 14px PTSansRegular ;
+    color: #666666;
+    border-bottom: 1.5px dotted #000080;
+}
+h1 {
+	margin-top: 80px;
+	text-align:center;
+	font: 72px PTSerifBold;
+}
+.podhead{
+    margin-top: -40px;
+    margin-bottom: 125px;
+    text-align: center;
+    padding-right:39px;
+}
+.podhead li {
+    display: inline;
+    font: 18px PTSansRegular;
+}
+section{
+    width: 800px;
+    margin: 70px auto;
+}
+article{
+    float: right;
+    width: 600px;
+    font: 14px PTSansRegular;
+}
+.photo{float:left;
+}
+.title{
+    font: 18px PTSansRegular;
+}
+.abs-1{
+    background-color: #ff6666;
+    position: absolute;
+    margin-left: -40px;
+    margin-top: -115px;
+    padding: 3px 8px 3px;
+    font: 14px PTSansItalic;
+    color: #FFF;
+}
+.abs-2{
+    background-color: #99cc66;
+    position: absolute;
+    margin-left: -40px;
+    margin-top: -115px;
+    padding: 3px 8px 3px;
+    font: 14px PTSansItalic;
+    color: #FFF;
+}
+.abs-3{
+    background-color: #6699cc;
+    position: absolute;
+    margin-left: -40px;
+    margin-top: -115px;
+    padding: 3px 8px 3px;
+    font: 14px PTSansItalic;
+    color: #FFF;
+}
+hr{
+    margin-top:265px;
+}
+.copyright{
+    width: 800px;
+	margin: -60px auto;
+    font: 12px PTSansRegular;
+    color: #666666;
+}
+a:link{
+    color: #000;
+}
+
+.bg{/*-webkit-filter: blur(4px);*/
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #c0c0c0;
+    opacity: 0.8;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);  
+}
+.pp{
+    background-color: #fff;
+    position: fixed;
+    z-index: 2;
+    top: 35%;
+    left: 50%;
+    width: 365px;
+    height: 230px;
+    box-shadow: 2px 5px 50px #333;
+    margin-left: -190px;
+}
+.login{
+    margin: 60px 30px 20px 60px;
+}
+.pas{
+    margin-left: 60px;
+}
+.send{
+    margin: 20px 15px 0 64px;
+    background: #ffffff;
+    background: linear-gradient(top, #ffffff, #d6d6d6);
+    background: -webkit-linear-gradient(top, #ffffff, #d6d6d6);
+    padding: 5px 15px 5px 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.send:hover {
+    background: #d6d6d6;
+    background: -webkit-linear-gradient(top, #d6d6d6, #ffffff);
+    background: linear-gradient(top, #d6d6d6, #ffffff);
+}
+#popup{
+             position: relative;
+             visibility: hidden;
+         }
