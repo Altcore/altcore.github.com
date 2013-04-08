@@ -215,20 +215,20 @@ a:link{
 }
 
 .bg{/*-webkit-filter: blur(4px);*/
-    z-index: 1;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: #c0c0c0;
-    opacity: 0.8;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);  
+    	 background: url(../img/background.gif) repeat;
+	opacity: 0.9;
+  	width:1500px; height:1800px;-webkit-filter: blur(3px);
+ 	 z-index:2;
+  	position:fixed;
+   	 top: 0;
+   	 right: 0;
+   	 left: 0;
+    	bottom: 0;
 }
 .pp{
     background-color: #fff;
     position: fixed;
-    z-index: 2;
+    z-index: 10;
     top: 35%;
     left: 50%;
     width: 365px;
