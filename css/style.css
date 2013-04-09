@@ -182,15 +182,12 @@ font-family: 'foglihtenno06';
     width: 140px;
     height: 140px;
 }
-<<<<<<< HEAD
+
 #my_projects li {
     float:none;
     display: inline;
     margin: 20px;
 }
-=======
-
->>>>>>> v2
 
 #my_projects li {
     float: left;
