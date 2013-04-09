@@ -188,7 +188,14 @@ font-family: 'foglihtenno06';
     display: inline;
     margin: 20px;
 }
-
+#my_projects li {
+    float: left;
+    display: inline;
+    margin: 20px;
+    -webkit-border-radius: 80px;
+   -moz-border-radius: 80px;
+    border-radius: 80px;
+}
 #my_projects li {
     float: left;
     display: inline;
@@ -201,7 +208,11 @@ font-family: 'foglihtenno06';
     -o-transition: all 0.20s linear;
     transition: border-radius 0.20s linear;
 }
-
+#my_projects li:hover {
+   -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+    border-radius: 0px;
+}
 .item1 { background: url('../img/portfolio_item1.jpeg') 0 140px }
 .item2 { background: url('../img/portfolio_item2.jpeg') 0 140px }
 .item3 { background: url('../img/portfolio_item3.jpeg') 0 140px }
