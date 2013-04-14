@@ -216,18 +216,6 @@ a:link{
 }
 
 
-.bg{/*-webkit-filter: blur(4px);*/
-    	 background: url(../img/background.gif) repeat;
-	opacity: 0.9;
-  	width:1500px; height:1800px;-webkit-filter: blur(3px);
- 	 z-index:2;
-  	position:fixed;
-   	 top: 0;
-   	 right: 0;
-   	 left: 0;
-    	bottom: 0;
-
-
 /*.bg{
     z-index: 2;
     position: fixed;
@@ -251,6 +239,8 @@ opacity: 0.9;
     right: 0;
     left: 0;
     bottom: 0;
+
+   
 }
 
 .pp{
