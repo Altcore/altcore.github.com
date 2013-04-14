@@ -215,7 +215,7 @@ a:link{
     color: #000;
 }
 
-<<<<<<< HEAD
+
 .bg{/*-webkit-filter: blur(4px);*/
     	 background: url(../img/background.gif) repeat;
 	opacity: 0.9;
@@ -226,7 +226,7 @@ a:link{
    	 right: 0;
    	 left: 0;
     	bottom: 0;
-=======
+
 
 /*.bg{
     z-index: 2;
@@ -251,9 +251,6 @@ opacity: 0.9;
     right: 0;
     left: 0;
     bottom: 0;
-
-   
->>>>>>> hw1_1
 }
 
 .pp{
@@ -292,8 +289,6 @@ opacity: 0.9;
              position: relative;
              visibility: hidden;
          }
-<<<<<<< HEAD
-=======
 
 .category{
     font: 14px PTSansRegular ;
@@ -437,4 +432,3 @@ h2 {
     font: 12px PTSansRegular;
     color: #666666;
 }
->>>>>>> hw1_1
