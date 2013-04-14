@@ -129,10 +129,10 @@ body{
 }
 .left{
     float:left;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-left: 12px;
     text-transform: uppercase;
-    font: 24px PTSansBold;
+    font: 20px PTSansBold;
 }
 
 .right{ float: right;
@@ -160,11 +160,11 @@ h1 {
     display: inline;
     font: 18px PTSansRegular;
 }
-section{
+.allnews {
     width: 800px;
     margin: 70px auto;
 }
-article{
+.newslist{
     float: right;
     width: 600px;
     font: 14px PTSansRegular;
@@ -209,11 +209,13 @@ hr{
 	margin: -60px auto;
     font: 12px PTSansRegular;
     color: #666666;
+    margin-bottom: 65px;
 }
 a:link{
     color: #000;
 }
 
+<<<<<<< HEAD
 .bg{/*-webkit-filter: blur(4px);*/
     	 background: url(../img/background.gif) repeat;
 	opacity: 0.9;
@@ -224,7 +226,36 @@ a:link{
    	 right: 0;
    	 left: 0;
     	bottom: 0;
+=======
+
+/*.bg{
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #c0c0c0;
+    -webkit-filter: blur(4px);
+    opacity: 0.8;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);  
+}*/
+/*-webkit-filter: blur(4px);*/
+.bg{
+    background: url(../img/background.gif) repeat;
+opacity: 0.9;
+  width:1500px; height:1800px;-webkit-filter: blur(3px);
+  z-index:1;
+  position:fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+   
+>>>>>>> hw1_1
 }
+
 .pp{
     background-color: #fff;
     position: fixed;
@@ -236,6 +267,7 @@ a:link{
     box-shadow: 2px 5px 50px #333;
     margin-left: -190px;
 }
+
 .login{
     margin: 60px 30px 20px 60px;
 }
@@ -260,3 +292,149 @@ a:link{
              position: relative;
              visibility: hidden;
          }
+<<<<<<< HEAD
+=======
+
+.category{
+    font: 14px PTSansRegular ;
+    margin: 15px 0 0 1px;
+    text-align: center;
+}
+
+.category li {
+    display: inline;
+    margin: 0 18px 0 0;
+}
+.category a {
+    color: #036;
+}
+
+.category li:first-child a {
+    text-decoration: none;
+    color: #000;
+    font: 14px PTSansBold ;
+}
+.profile {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 12px 12px 0 0;
+    border-radius: 10px;
+    box-shadow: 2px 5px 6px  #999;
+    background: linear-gradient(to bottom, #ffffff 0%,#f9f9f9 21%,#e0e0e0 79%,#dadada 100%);
+    background: -webkit-linear-gradient(top, #ffffff 0%,#f9f9f9 21%,#e0e0e0 79%,#e0e0e0 100%);
+    z-index: 1;
+}
+
+
+.name {
+    margin: 4px 25px;
+    font: 14px PTSansRegular;
+    color: #666;
+    text-shadow: 2px 1px #fff;
+}
+
+.profile-menu {
+    display: none;
+    padding: 0;
+    margin: 10px 0 10px 20px;
+}
+.profile:hover  .profile-menu {
+    display: block;
+}
+.profile-menu li {
+    display: block;
+    margin-bottom: 7px;
+}
+
+.profile-menu a {
+    font:14px PTSansRegular;
+    color: #666;
+}
+.arrow {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 86px;
+    top: 26px;
+    margin-top: -3px;
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: grey transparent;  
+    z-index: 2;
+}
+
+
+.content {
+    width: 800px;
+    margin: auto;
+    margin-top: 100px;
+     border-bottom: 4px solid #999999;
+}
+
+.note {
+    display: inline-block;
+    width: 180px;
+    float: left;
+    margin-top: 150px;
+    color: #666;
+    font: 10px Verdana;
+    line-height: 15px;
+}
+.news {
+    display: inline-block;
+    width: 600px;
+    float: right;
+    font:14px PTSansRegular;
+    color: #333333;
+    margin-bottom: 85px;
+
+}
+h2+p  {margin-top:75px; }
+h2 {
+    font:24px PTSerifBold;
+}
+
+.similar_news {
+    width: 800px;
+    margin:10px auto;
+    position: relative;
+}
+
+.similar_news h2 {
+    position: absolute;
+    font:14px PTSansBold;
+    top: 5px;
+    width: 125px;
+    text-align: left;
+    margin: 0;
+}
+
+.list_of_similar_news {
+    float: right;
+}
+.list_of_similar_news p {
+    font: 12px PTSansRegular;
+    color: #999;
+}
+.list_of_similar_news li {
+    display: inline;
+    width: 190px;
+    float: left;
+    margin-left: 20px;
+
+}
+.list_of_similar_news h3 {
+    font: 14px PTSansRegular;
+    text-align: left;
+    margin-top: 5px;
+}
+.copy {
+    border-top: 2px solid #999999;
+    width: 800px;
+    margin: 20px auto 65px;
+    font: 12px PTSansRegular;
+    color: #666666;
+}
+>>>>>>> hw1_1
