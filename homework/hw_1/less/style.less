@@ -69,7 +69,8 @@ body{
 }
 .post      { width: 800px;
              margin:0 auto 70px;
- .photo    { float:left; 
+ .photo    { float:left;
+             position: relative; 
              margin-top: 18px;
    .abs-1  { background-color: #ff6666;
              .abs;
@@ -138,6 +139,7 @@ body{
     .post .photo .abs-1, 
     .post .photo .abs-2,
     .post .photo .abs-3 {
+        position: absolute;
         margin-left: 140px;
     }
     .newslist {
@@ -153,6 +155,11 @@ body{
         left: 200px;
     }
 }
+// @media screen and (max-width: 450px) {
+//     .newslist .title {
+//        font: 10px PTSansRegular; 
+//     }
+// }
 /*_-_-_-_-_-_-_-_-_-_-_-_-_SECOND_PAGE-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 .head           {
     .logo       { .logotype;}
