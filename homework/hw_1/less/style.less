@@ -130,6 +130,7 @@ body{
      }
     }       
 }
+/*_-_-_-_-_-_-_-_-_-_-_-_-_Media Queries to First Page-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 @media (max-width: 880px) {
     .post .photo .abs-1, 
     .post .photo .abs-2,
@@ -173,8 +174,7 @@ body{
     }
 }
 * {
-  -webkit-transition: all 0.6s ease, margin-left 0.9s ease;
-  // -webkit-transition: width 0.9s ease;
+  -webkit-transition: all 0.4s ease, margin 0.9s ease;
 }
 /*_-_-_-_-_-_-_-_-_-_-_-_-_SECOND_PAGE-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 .head           {
@@ -269,3 +269,70 @@ body{
     }
   }
 } 
+/*_-_-_-_-_-_-_-_-_-_-_-_-_Media Queries to Second Page-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+@media (max-width: 790px) {
+    .head .category {
+        position: absolute;
+        width: 400px;
+        left:50%;
+        margin: 50px 0 0 -200px;
+
+        
+        font: 18px PTSansRegular;
+    }
+    .head .category ul {
+        padding-left: 0px;
+    }
+    .head .category li {
+        margin-right: 5px;
+    }
+    .content {
+        width: 100%;
+        margin-top: 40px;
+    }
+    .content .note {
+        display: none;
+    }
+    .content .news {
+        width: 90%;
+        margin: 20px 20px 85px 20px;
+    }
+    .similar_news {
+        position: relative;
+        width: 100%; 
+        margin-top: 50px;
+
+    }
+    .similar_news .list_of_similar_news {
+        float: none;
+        margin: 0 auto 0;
+        
+    }
+    
+    .similar_news h2 {
+        // position: static;
+        // font: 20px PTSansBold;
+        // width: 250px;
+        // margin: 0 auto 10px;
+        position: absolute;
+        top: -40px;
+        width: 250px;
+        left:50%;
+        margin: 0 0 0 -125px;
+        font: 20px PTSansBold;
+    }
+}
+@media (max-width: 635px) and (min-width: 400px)  {
+    .similar_news .list_of_similar_news li {
+        float: none;
+        display: block;
+        width: 400px;
+        margin: 0 auto 0;
+    }
+    .list_of_similar_news img {
+        width: 400px;
+    }
+}
+// @media (max-width: 640px) and (min-width: 450px)  {
+    
+// }
