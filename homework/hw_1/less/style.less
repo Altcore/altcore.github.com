@@ -124,7 +124,7 @@ body{
          width: 80%;
     }
 }
-@media screen and (max-width: 640px) and (min-width: 450px)  {
+@media screen and (max-width: 640px) {
     body {
         width: 100%;
     }
@@ -292,7 +292,7 @@ body{
     .similar_news .list_of_similar_news {
         float: none;
         margin: 0 auto 0;
-        
+        padding-left: 0;
     }
     
     .similar_news h2 {
@@ -309,6 +309,9 @@ body{
     }
     .similar_news .list_of_similar_news li {
         width: 150px;
+    }
+    .similar_news .list_of_similar_news li:first-child{
+        margin-left: 0;
     }
     .list_of_similar_news img {
         width: 150px;
