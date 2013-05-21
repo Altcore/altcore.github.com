@@ -10,12 +10,11 @@ html, body {
 	overflow: hidden;
 	visibility: hidden;
 	opacity: 0;
-	filter: alpha(opacity=0);
+	filter: alpha(opacity=1);
 	top: 50%;
 	left: 50%;
 	z-index: 1000;
 	box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .5);
-
 	-webkit-transform: scale(0.8);
 	-moz-transform: scale(0.8);
 	-ms-transform: scale(0.8);
@@ -34,6 +33,7 @@ html, body {
 	visibility: hidden;
 	opacity: 0;
 	filter: alpha(opacity=0);
+	/*-webkit-filter: blur(5px) grayscale (.5) opacity(0.1);*/
 }
 
 body.avgrund-ready,
@@ -76,7 +76,7 @@ body.avgrund-active {
 
 .avgrund-active .avgrund-overlay {
 	visibility: visible;
-	opacity: .5;
+	opacity: .7;
 	filter: alpha(opacity=50);
 }
 
@@ -97,11 +97,11 @@ body.avgrund-active {
 }
 
 .avgrund-active .avgrund-blur {
-	-webkit-filter: blur(1px);
-	-moz-filter: blur(1px);
-	-ms-filter: blur(1px);
-	-o-filter: blur(1px);
-	filter: blur(1px);
+	-webkit-filter: blur(2px);
+	-moz-filter: blur(2px);
+	-ms-filter: blur(2px);
+	-o-filter: blur(2px);
+	filter: blur(2px);
 }
 
 .avgrund-wrap-inner {
@@ -112,15 +112,22 @@ body.avgrund-active {
 
 /* Optional close button styles */
 .avgrund-close {
-	display: block;
-	color: #555;
-	font-size: 13px;
 	text-decoration: none;
 	text-transform: uppercase;
 	position: absolute;
-	top: 6px;
-	right: 10px;
+	bottom: 37px;
+	left: 240px;
+	font: 18px PTSansRegular;
+    background: #ff6666;
+    .gradient(~"linear-gradient(#ff6666, #ff6666)"); 
+    padding: 5px 15px 5px 15px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border: 2px outset buttonface;
 }
+.avgrund-close:hover{ background: #feb2b1;
+              .gradient(~"linear-gradient(top, #feb2b1, #feb2b1)"); 
+     }
 
 
 html {

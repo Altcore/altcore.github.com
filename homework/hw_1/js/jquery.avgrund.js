@@ -118,6 +118,7 @@
 				if (typeof options.onUnload === 'function') {
 					options.onUnload.call(self);
 				}
+				$('.wrap').removeClass('blur')
 			}
 
 			// init on click or custom event

@@ -14,22 +14,18 @@
    
  </head>
  <body>
-
+<div class="wrap">
  <div class="topmenu clearfix">
     <div class="logo">lorem ipsum news</div>
     <div class="login">
-    <a  href="#" onclick="showLayer()">Войти</a>
-
+    <a  href="#" class="popup">Войти</a>
+    </div>
 </div>
-    <script type="text/javascript">
-         function hiddenLayer() {
-             document.getElementById("popup").style.visibility = "hidden";
-         }
-         function showLayer() {
-             document.getElementById("popup").style.visibility = "visible";
-         }
-   </script>
- </div>
+<script>
+  $(".popup").click(function () {
+      $(".wrap").addClass("blur");
+    });
+</script>
  <header class="navboard"><h1>Новости</h1>
    <ul>
        <li>скандалы</li>
@@ -67,9 +63,9 @@
 
 
  <footer class="copyright">© ЗАО &laquo;Лорем ипсум ньюс&raquo;</footer>
-
+</div>
  <!--Popup-->
- <div  id="popup">
+ <!-- <div  id="popup">
      <div class="layer"></div>
      <div class="pp">
 
@@ -81,25 +77,21 @@
 
       </form>
     </div>
- </div>
+ </div> -->
  <script>
  $(function() {
-    $('#avg').avgrund({
+    $('.popup').avgrund({
       height: 200,
       holderClass: 'custom',
       showClose: true,
-      showCloseText: 'Close',
+      showCloseText: 'Отмена',
       enableStackAnimation: true,
       onBlurContainer: '.container',
-      template: '<div class="pp">'+
-       '<form>'+
+      template: '<form class="enter">'+
            '<input class="name" name="login" type="text" required placeholder="Логин" form="data" size="25">'+
            '<input class="parole" name="pas" required type="password" placeholder="Пароль" form="data" size="25">'+
            '<input id="send" class="send" type="submit" value="Войти" form="data">'+
-           '<a class="log" href="#" onclick="hiddenLayer()">Отмена</a>'+
-      '</form>'+
-    '</div>' 
-      
+      '</form>'
     });
   });
 </script>
