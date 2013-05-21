@@ -17,7 +17,7 @@
 .abs        { position: absolute;
               margin-left: -40px;
               margin-top: -115px;
-              padding: 3px 8px 3px;
+              padding: 3px 10px 3px;
               font: 14px PTSansItalic;
               color: #FFF;
 }
@@ -68,29 +68,28 @@ body{
         }
     }
 }
-.main       {
- .post      { width: 800px;
-              margin:0 auto 70px;
-  .photo    { float:left; 
-              margin-top: 18px;
-    .abs-1  { background-color: #ff6666;
-              .abs;
-    }
-    .abs-2  { background-color: #99cc66;
-              .abs;
-    }
-    .abs-3  { background-color: #6699cc;
-              .abs;
-    }
-  }
-  .newslist { .PTSANS14px;
-              float: right;
-              width: 600px;
-              color: #000;
-    .title  { .PTSANS18px;}
-  }
+.post      { width: 800px;
+             margin:0 auto 70px;
+ .photo    { float:left; 
+             margin-top: 18px;
+   .abs-1  { background-color: #ff6666;
+             .abs;
+   }
+   .abs-2  { background-color: #99cc66;
+             .abs;
+   }
+   .abs-3  { background-color: #6699cc;
+             .abs;
+   }
  }
 }
+.newslist { .PTSANS14px;
+            float: right;
+            width: 600px;
+            color: #000;
+  .title  { .PTSANS18px;}
+}
+ 
 .copyright  { .copy;}
 #popup      { position: relative;
               visibility: hidden;
@@ -130,6 +129,48 @@ body{
      }
      }
     }       
+}
+@media (max-width: 880px) {
+    .post .photo .abs-1, 
+    .post .photo .abs-2,
+    .post .photo .abs-3 {
+        margin-left: 0px;
+}
+}
+@media (max-width: 640px) and (min-width: 450px)  {
+    body {
+        width: 100%;
+    }
+    .post {
+        width: 87.5%;
+        margin: 0;
+        margin-left: 40px;
+    }
+    .copyright  {
+         width: 100%;
+    }
+    .post .photo .abs-1, 
+    .post .photo .abs-2,
+    .post .photo .abs-3 {
+        margin-left: 140px;
+    }
+    .newslist {
+        width: 100%;
+        float: left;
+        position: relative;
+        // min-height: 130px;
+        margin-top: 0;
+    }
+    .newslist .title {
+        position: absolute;
+        // bottom:140px;
+        top:-80px;
+        left: 200px;
+
+    }
+}
+* {
+  -webkit-transition: margin 1.9s ease;
 }
 /*_-_-_-_-_-_-_-_-_-_-_-_-_SECOND_PAGE-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 .head           {
