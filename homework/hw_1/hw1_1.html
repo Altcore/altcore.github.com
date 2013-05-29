@@ -58,6 +58,133 @@
 			</p>
 		</article>
 	</section>
+	<div class="wrap">
+	<section class="comments_wrap">
+		<h2>Коментарии (10)</h2>
+		<form class="comments_form" id="formCom">
+			<input class="name" type="text"  name="name" required placeholder="Имя" form="formCom" size="25">
+			<textarea class="text" name="comment" required placeholder="Комментарий" form="formCom" maxlength="600"></textarea>
+			<p class="error"><img src="img/error.png">Пожалуйста, заполните все поля перед отправкой</p>
+			<input class="add" type="submit" value="Добавить комментарий" form="formCom">
+		</form>
+
+		<div class="comments">
+			<ul>
+
+			<li class="comment-text" id="comment1"><a name="cmmid1"></a>
+			    <div class="msg msg_first">
+			        <p class="msg_name">Константин Константинопольский<span class="msg_date">0:44, четверг, 24.05.2013</span></p>
+			        <p>Шило на мыло меняют- клан меняют свою шкуру и все- Патриарх Никон.: «Ибо совершивший грех есть раб греха , хотя бы имел тысячи корон на свей голове, но кто поступает праведно, тот больше самого царя, хотя бы он был последний из всех».</p>
+			        <a class="answer-link" href="#" onclick="answerTo(1); return false;">Ответить</a>
+			    </div>
+			</li>
+
+			<li class="comment-text" id="comment2"><a name="cmmid2"></a>
+			    <div class="msg">
+			        <p class="msg_name">Leonid Ivashentsev<span class="msg_date">22:53, четверг, 23.05.2013</span></p>
+			        <p>это же сплошное мимимими</p>
+			        <a class="answer-link" href="#" onclick="answerTo(2); return false;">Ответить</a>
+			    </div>
+			</li>
+
+			<li class="comment-text" style="margin-left: 30px;" id="comment3"><a name="cmmid3"></a>
+			    <div class="msg">
+			        <p class="msg_name">Серега<span class="msg_date">22:33, четверг, 23.05.2013</span></p>
+			        <p>хороший человек.<br>
+			        а откуда он тырил пиво то?</p>
+			        <a class="answer-link" href="#" onclick="answerTo(3);return false;">Ответить</a>
+			    </div>
+			</li>
+
+			<li class="comment-text" id="comment4"><a name="cmmid4"></a>
+			    <div class="msg">
+			        <p class="msg_name">Иван Васильев<span class="msg_date">21:37, четверг, 23.05.2013</span></p>
+			        <p>> хотели бы пригласить его в гости, чтобы пообщаться и обнять его.<br>Слишком толсто.</p>
+			        <a class="answer-link" href="#" onclick="answerTo(4);return false;">Ответить</a>
+			    </div>
+			</li>
+
+			<li class="add-comment" id="commentForm"  >
+			    <div class="field">
+			    	<form name="Comment" method="post" onsubmit="return $('#Comment_cont').val() != ''" class="comments_form_sub" id="formSub">
+			    		<input class="name" type="text"  name="name" required placeholder="Имя" size="25" form="formSub">
+			        	<textarea class="text" name="Comment[cont]" id="Comment_cont" required placeholder="Комментарий" form="formSub"></textarea>
+			        	<input type="hidden" value="147" name="Comment[item_id]"/><!-- id коментируемой записи -->
+			        	<input type="hidden" value="0" name="Comment[answer_to]" id="Comment_answer_to"/><!-- id комента,на который отвечаем -->
+			        	<p class="error_sub"><img src="img/error.png">Пожалуйста, заполните все поля перед отправкой</p>
+			        	<input class="add" type="submit" value="Добавить комментарий" form="formSub">
+			    	</form>
+			    </div>
+			</li>
+			</ul>
+		</div>
+
+<script>
+function answerTo(commentId)
+{
+    var cForm = $('#commentForm');
+    var elCurrent = $('#comment'+commentId); // <li> с комментарием, на который отвечаем
+    var elNext = elCurrent.next(); // следующий <li>
+
+    if (elNext!=cForm) {
+        cForm.insertAfter(elCurrent);
+    }
+
+    if (commentId != 'New') // показываем форму под коментарием, на который отвечаем
+    {
+        if (!document.getElementById('commentNew'))
+            elCurrent.parent().append('<li class="add-comment nopadding" id="commentNew"><h3><a href="#"onclick="answerTo(\'New\'return false;">'+$('#commentForm h3').text()+'</a></h3></li>')			
+        $('#Comment_answer_to').val(commentId); 
+        cForm.css({'margin-left': parseInt(elCurrent.css('margin-left'))+30+'px'}); 
+    }
+    else
+    {
+        $('#commentNew').remove();
+        $('#Comment_answer_to').val(0);
+        cForm.css({'margin-left': '0px'});
+    }
+};
+</script>
+
+<script>
+  	$(".answer-link").click(function() {
+  	$('#commentForm').show();
+  	$('.error').hide();
+    });
+
+	$('.comments_form .text').focus(function(){
+	$('#commentForm').hide();
+	});
+// $('#text1, #textarea1').focusout(function() {
+//     alert(this.id + " focus out");
+// });
+
+	$('.name').blur(function() {
+     	if ($(this).val() == '') $(this).prev().removeClass('hide');
+	});
+	$('.name').focus(function() {
+    	$(this).prev().addClass('hide');
+	});
+
+	$('.comments_form :input').blur(function() {
+  		if($(this).val().length == 0) {
+    		$(".error").show();
+  		}
+	});
+	$('.comments_form :input').focus(function() {
+  		$(".error").hide();
+  	});
+
+	$('.add-comment :input').blur(function() {
+  		if($(this).val().length == 0) {
+    	$(".error_sub").show();}
+	});
+	$('.add-comment :input').focus(function() {
+  		$(".error_sub").hide();
+  	});
+</script>
+	</section>
+	</div>
 	<section class="similar_news clearfix">
 		<h2>Другие материалы рубрики</h2>
 		<ul class="list_of_similar_news clearfix ">
@@ -85,16 +212,5 @@
 		</ul>
 	</section>
 	<footer class="copyright"><p>© ЗАО &laquo;Лорем ипсум ньюс&raquo;</p></footer>
- <script>
-// // $(window).resize(function(){
-// 	if ($(window).width() < 750){	
-// 		$('.note ').animate({opacity:0},100);
-// 	}	
-// 	else {
-// 		$('.note ').animate({opacity:1});
-// 	}
-// // });
-
-// </script>
 </body>
 </html>

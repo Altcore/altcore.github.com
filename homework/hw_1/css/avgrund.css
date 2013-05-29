@@ -111,23 +111,7 @@ body.avgrund-active {
 }
 
 /* Optional close button styles */
-.avgrund-close {
-	text-decoration: none;
-	text-transform: uppercase;
-	position: absolute;
-	bottom: 37px;
-	left: 240px;
-	font: 18px PTSansRegular;
-    background: #ff6666;
-    .gradient(~"linear-gradient(#ff6666, #ff6666)"); 
-    padding: 5px 15px 5px 15px;
-    border-radius: 7px;
-    -webkit-border-radius: 7px;
-    border: 2px outset buttonface;
-}
-.avgrund-close:hover{ background: #feb2b1;
-              .gradient(~"linear-gradient(top, #feb2b1, #feb2b1)"); 
-     }
+
 
 
 html {
