@@ -1,0 +1,397 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Retina</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+	<!--
+		To apply styles to the certain slides
+		set slide ID to get needed elements
+		-->
+	<style>
+		
+		#Cover h2 {
+			margin:-80px 0 0 0px;
+			color:#cc0000;
+			font-size:110px;
+			}
+		#Cover p {
+			margin:440px 0 0 -100px;
+			color:#000;
+			font-style:italic;
+			font-size:40px; 
+			}
+		#Cover p a {
+				color:#FFF;
+				}
+		#Picture h2 {
+			color:#FFF;
+			}
+		#SeeMore h2 {
+			font-size:100px
+			}
+		#SeeMore img {
+			width:0.72em;
+			height:0.72em;
+			}
+		.contrast_text h2 {
+			font-size: 45px;
+			color: #ffffff;
+			margin-top: -100px;
+			margin-left: -100px;
+		}
+		.img_overflow img {
+			margin-top: 60px;
+		}
+		#Flowers-M h2,
+		#Flowers-H h2 {
+			position:absolute;
+			top:70px;
+			left:280px;
+			text-shadow:0 3px 0 rgba(255, 255, 255, 0.6);
+			}
+
+	</style>
+</head>
+<body class="list">
+
+	<header class="caption">
+		<h1>Retina</h1>
+		<p></p>
+	</header>
+
+	<section class="slide cover" id="Cover"><div>
+		<h2>Retina Presentation</h2>
+		<p>by Artem Trgtsin</p>
+		<img src="pictures/first_slide.jpeg" alt="" width="1024">
+	</div></section>
+
+	<section class="slide cover contrast_text"><div>
+		<h2>If you think the iPhone was the first device with a retina screen, you’d be wrong</h2>
+		<img src="pictures/iphone.jpeg" alt="" width="1024">
+	</div></section>
+
+	<section class="slide cover contrast_text img_overflow"><div>
+		<img src="pictures/nokia.jpg" alt="" height="600">
+		<h2>Nokia N770 (800x480 resolution on a 4.1 inch screen) 
+		</h2>
+	</div></section>
+
+	<section class="slide cover contrast_text img_overflow"><div>
+		<h2>“Retina” displays are roughly 200 ppi and up.
+		</h2>
+		<img src="pictures/ppi.png" alt="" height="600">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Design for Mobile</h2>
+		<pre>
+			<code><mark>&lt;meta</mark> name="viewport" content="</code>
+			<code>      initial-scale=1,</code>
+			<code>      maximum-scale=1"&gt;</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Detecting retina screens in JavaScript</h2>
+		<pre>
+			<code><mark>function isRetina(){</mark></code>
+			<code>    return (('devicePixelRatio' in window &&</code>
+			<code>    devicePixelRatio > 1) ||</code>
+			<code>    ('matchMedia' in window && </code>
+			<code>    !matchMedia("(-moz-device-pixel-ratio:1.0)").matches))</code>
+			<code><mark>}</mark></code>
+		</pre>
+		<!-- <figure>
+			<blockquote>
+				<p>Lo officia.</p>
+			</blockquote>
+			<figcaption>Marcus Tullius Cicero</figcaption>
+		</figure> -->
+		<!-- <ol>
+			<li>You can even nest lists one inside another
+				<ul>
+					<li>Otherwise audience will be bored</li>
+				</ul>
+			</li>
+			<li>Look, seven rows exactly!</li>
+		</ol> -->
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Detecting retina screens in CSS</h2>
+		<pre>
+			<code><mark>@media</mark> (-webkit-min-device-pixel-ratio:<mark>1.5</mark>),</code>
+			<code>       (min--moz-device-pixel-ratio:<mark>1.5</mark>),</code>
+			<code>       (-o-min-device-pixel-ratio:<mark>3/2</mark>),</code>
+			<code>       (min-resolution:<mark>1.5dppx</mark>) {</code>
+			<code>       <mark class="important">E</mark> { something }</code>
+			<code>       }</code>
+		</pre>
+	</div></section>
+
+	
+
+	<section class="slide cover" id="Picture"><div>
+		<img src="pictures/whats-next.jpg" alt=""width="1174">
+		<!-- photo by John Carey, fiftyfootshadows.net -->
+	</div></section>
+	
+	<section class="slide shout" id="Text"><div>
+		<h2>Optimize<br>the content</h2>
+	</div></section>
+	
+	<section class="slide shout" ><div>
+		<h2>Text & Fonts</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<img src="pictures/thomasfuchs.png" alt="" width="100">
+		<figure>
+			<blockquote>
+				<p>Text is text, and won’t flow differently on a retina screen</p>
+			</blockquote>
+			<figcaption>Thomas Fuchs</figcaption>
+		</figure>
+	</div></section>
+	
+	<section class="slide shout" ><div>
+		<h2>Bitmapped images</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>PNG</h2>
+		<ol>
+			<li>PNGs for background gradients ➤➤➤ use CSS gradient (<a href="http://csshat.com/">CSS Hat</a> or <a href="colorzilla.com/gradient-editor">Сolorzilla</a>)
+			</li>
+			<li>For UI elements ➤➤➤ convert to SVG </li>
+			<li>Use two versions ➤➤➤ if icon or small text rendered on a UI element might get blurry at smaller sizes</li>
+			<li>Others ➤➤➤ use a larger version and scale down on normal screens</li>
+		</ol>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Basic two-image variation CSS snippet</h2>
+		<pre>
+			<code>E {</code>
+			<code>    background:url(<mark>50px.png</mark>) no-repeat;</code>
+			<code>    }</code>
+			<code>@media (<mark>retina</mark>) {</code>
+			<code>    E { background:url(<mark>100px.png</mark>) no-repeat; }</code>
+			<code>    }</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Snippet to larger version and scale down</h2>
+		<pre>
+			<code>E {</code>
+			<code>    background:url(<mark>100px.png</mark>) no-repeat;</code>
+			<code>    background-size:<mark>50px 50px</mark>;</code>
+			<code>    }</code>
+		</pre>
+		<ul>
+			<li>But, not all pictures scalable</li>
+			<li><code>bg-size</code>=80% cross-browser compatibility   <a href="http://caniuse.com/#search=background-size"></a></li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>CSS Sprite</h2>
+		<img src="pictures/Css-sprite.png" alt="" width="600">
+	</div></section>
+	
+	<section class="slide"><div>
+		<pre>
+			<code><mark>.location</mark> {background: url(sprite.png) no-repeat<mark>0 0;</mark> }</code>
+			<code>....</code>
+			<code><mark>.fav-link</mark> {background: url(sprite.png) no-repeat<mark>0 -100px;</mark>}</code>
+			<code>@media only screen and (-webkit-min-device-pixel-ratio: 2), </code>
+			<code>only screen and (min-device-pixel-ratio: 2) {</code>
+			<code>    <mark>.location,....,.fav-link</mark> {</code>
+			<code>        background-image: url(sprite@2x.png);</code>
+			<code>        background-size: 200px 200px;</code>
+			<code>}}</code>
+		</pre>
+	</div></section>
+
+	<section class="slide shout" ><div>
+		<h2>JPEG</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<img src="pictures/thomasfuchs.png" alt="" width="100">
+		<figure>
+			<blockquote>
+				<p>For content images, double the resolution but lower the quality. Don’t bother with two versions</p>
+			</blockquote>
+			<figcaption>Thomas Fuchs</figcaption>
+		</figure>
+	</div></section>
+
+	<section class="slide cover" id="Flowers-M"><div>
+		<h2>Quality 60, 1024 × 640, 99 КБ</h2>
+		<img src="pictures/flowers-m.jpg" width="1024" alt="">
+		<!-- Photo by John Carey — fiftyfootshadows.net -->
+	</div></section>
+
+	<section class="slide cover" id="Flowers-H"><div>
+		<h2>Quality 25, 2048 × 1280, 75 КБ</h2>
+		<img src="pictures/flowers-h.jpg" width="1024" alt="">
+		<!-- Photo by John Carey — fiftyfootshadows.net -->
+	</div></section>
+	
+	<section class="slide shout"><div>
+		<h2>favicon.ico</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<p><strong>Need to create an .ICO file with two size variants:</strong></p>
+		<ul>
+			<li>16px by 16px for standard screens</li>
+			<li>32px by 32px for retina screens</li>
+		</ul>
+		<p><strong>For this:</strong></p>
+		<ol>
+			<li>create the two icon and save them as 32-bit PNGs with an alpha channel</li>
+			<li>use a icon editor app to create the .ICO file <a href="http://xiconeditor.com/">xiconeditor</a>  </li>
+		</ol>
+	</div></section>
+	
+	<section class="slide shout"><div>
+		<h2>SVG</h2>
+	</div></section>
+	
+	<section class="slide cover"><div>
+		<img src="pictures/support.png" alt="">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Fallback with jQuery and Modernizr</h2>
+		<pre>
+			<code>&lt;img src="example.svg" data-png-fallback="example.png" /&gt;</code>
+			<code><mark>$(document).ready(function(){</mark></code>
+			<code>    if(!Modernizr.svg) {</code>
+			<code>      var images = $('img[data-png-fallback]');</code>
+			<code>      images.each(function(i) {</code>
+			<code>        $(this).attr('src', $(this).data('png-fallback'));</code>
+			<code>      });</code>
+			<code>    }</code>
+			<code><mark>});</mark></code>
+		</pre>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>Fallback for IE6-8</h2>
+		<pre>
+			<code>E {</code>
+			<code>    background:url(<mark>image.png</mark>) no-repeat;</code>
+			<code>    background:</code>
+			<code>        <mark>rgba(0, 0, 0, 0)</mark></code>
+			<code>        url(<mark>image.svg</mark>) no-repeat;</code>
+			<code>    }</code>
+		</pre>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>Snippet for making icon</h2>
+		<pre>
+			<code>&lt;img src="<mark>logo.svg</mark>" width="512" height="512"&gt;</code>
+			<code>&lt;img src="<mark>logo.svg</mark>" width="256" height="256"&gt;</code>
+			<code>&lt;img src="<mark>logo.svg</mark>" width="128" height="128"&gt;</code>
+			<code>&lt;img src="<mark>logo.svg</mark>" width="32"  height="32"&gt;</code>
+			<code>&lt;img src="<mark>logo.svg</mark>" width="16"  height="16"&gt;</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>base64 format</h2>
+		<pre>
+			<code>&lt;image id="<mark>icon-16</mark>"  xlink:href="data…</code>
+			<code>&lt;image id="<mark>icon-32</mark>"  xlink:href="data…</code>
+			<code>&lt;image id="<mark>icon-128</mark>" xlink:href="data…</code>
+			<code>&lt;image id="<mark>icon-256</mark>" xlink:href="data…</code>
+			<code>&lt;image id="<mark>icon-512</mark>" xlink:href="data…</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Usecase</h2>
+		<pre>
+			<code>#icon-16, #icon-32, #icon-128,</code>
+			<code>#icon-256, #icon-512 {</code>
+			<code>    <mark>display:none;</mark></code>
+			<code>    }</code>
+			<code>@media screen and (<mark class="important">width:16px</mark>) {</code>
+			<code>    #icon-16 { <mark>display:inline</mark> }</code>
+			<code>    }</code>
+		</pre>
+	</div></section>
+	
+	<section class="slide "><div>
+		<h2>SVG vs PNG</h2>
+		<img src="pictures/svg-vs-png.png" alt="" width="430">
+	</div></section>
+
+	<section class="slide shout"><div>
+		<h2>Optimizing image file sizes with  <a href="http://imageoptim.com">imageoptim</a></h2>
+	</div></section>
+	
+	<section class="slide shout"><div>
+		<h2><a href="http://mir.aculo.us/2012/06/26/flowchart-how-to-retinafy-your-website/">Checklist</a></h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Testing</h2>
+		<ul>
+			<li>Adobe Edge Inspect</li>
+			<li>Opera Mobile Emulator</li>
+			<li>Android Emulator (Android SDK)</li>
+			<li>iOS Simulator, included in Xcode</li>
+			<li>Quartz Debug (Graphics Tools for Xcode)</li>
+		</ul>
+	</div></section>
+	
+	<section class="slide cover img_overflow"><div>
+		<img src="pictures/retinajs.jpg" alt="" width="1100">
+	</div></section>
+
+	<section class="slide"><div>
+		<h2><a href="http://retinajs.com/">Retina.js</a> for less</h2>
+		<ol>
+			<li>Add the .at2x() mixin from retina.less to your LESS stylesheet</li>
+			<li>In your stylesheet, call the .at2x() mixin anywhere instead of using background-image</li>
+		</ol>
+		<h2>Retina.js for js</h2>
+		<ol>
+			<li>Place the retina.js file on your server</li>
+			<li>Include the script on your page
+<pre><code><mark>&lt;script type="text/javascript" src="/scripts/retina.js"&gt;</mark></code></pre>
+</li>
+		</ol>
+		
+	</div></section>
+	
+	<section class="slide"><div>
+		<pre>
+			<code><mark>#logo</mark> {<mark>.at2x</mark>('/images/my_image.png', 200px, 100px);}</code>
+		</pre>
+		Will compile to:
+		<pre>
+			<code><mark>#logo</mark> { background-image: url('/images/<mark>my_image.png'</mark>); }</code>
+			<code>@media all and (-webkit-min-device-pixel-ratio: 1.5) {</code>
+			<code>    <mark>#logo</mark> {</code>
+			<code>        background-image: url('/images/<mark>my_image@2x.png'</mark>);</code>
+			<code>		  background-size: 200px 100px;</code>
+			<code>	}</code>
+			<code>}</code>
+		</pre>
+	</div></section>
+
+	<p class="badge"><a href="https://github.com/shower/shower">Fork me on Github</a></p>
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+</body>
+</html>
