@@ -88,9 +88,14 @@
 		<img src="pictures/ppi.png" alt="" height="600">
 	</div></section>
 	
-	<section class="slide cover"><div>
-		<img src="pictures/scalable-1.png" alt="" height="350">
-		<img src="pictures/scalable-2.png" alt="" height="350" class="two-image">
+	<section class="slide"><div>
+		<h2>Retina on Android</h2>
+		<ul>
+			<li class="next"><b>LDPI 0,75 —</b> old smartphones</li>
+			<li class="next"><b>MDPI 1,0 —</b> most smartphones</li>
+			<li class="next"><b>HDPI 1,5 —</b> Nexus One</li>
+			<li class="next"><b>XHDPI 2,0 —</b> Galaxy Nexus, Galaxy Note</li>
+		</ul>
 	</div></section>
 
 	<section class="slide"><div>
@@ -131,7 +136,7 @@
 	<section class="slide"><div>
 		<h2>Detecting retina screens in CSS</h2>
 		<pre>
-			<code><mark>@media</mark> (-webkit-min-device-pixel-ratio:<mark>1.5</mark>),</code>
+			<code><mark>@media</mark>(-webkit-min-device-pixel-ratio:<mark>1.5</mark>),</code>
 			<code>       (min--moz-device-pixel-ratio:<mark>1.5</mark>),</code>
 			<code>       (-o-min-device-pixel-ratio:<mark>3/2</mark>),</code>
 			<code>       (min-resolution:<mark>1.5dppx</mark>) {</code>
@@ -204,6 +209,11 @@
 			<li>But, not all pictures scalable</li>
 			<li><code>bg-size</code>=80% cross-browser compatibility   <a href="http://caniuse.com/#search=background-size"></a></li>
 		</ul>
+	</div></section>
+	
+	<section class="slide cover"><div>
+		<img src="pictures/scalable-1.png" alt="" height="350">
+		<img src="pictures/scalable-2.png" alt="" height="350" class="two-image">
 	</div></section>
 
 	<section class="slide"><div>
