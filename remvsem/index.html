@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>rem vs em</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+	<!--
+		To apply styles to the certain slides
+		set slide ID to get needed elements
+		-->
+	<style>
+		
+		#Cover h2 {
+			margin:-80px 0 0 0px;
+			color:#cc0000;
+			font-size:110px;
+			}
+		#Cover p {
+			margin:440px 0 0 -100px;
+			color:#000;
+			font-size:40px; 
+			}
+		#Cover p a {
+				color:#FFF;
+		}
+		.img_overflow img {
+			margin-top: 60px;
+		}
+		.few-content h2 {
+			margin-bottom: 70px;
+		}
+		.few-content li {
+			font-size: 32px;
+			margin-bottom: 30px; 
+		}
+		.first-result {
+			font-size: 64px;
+		}
+		.second-result {
+			font-size: 44px;
+		}
+	</style>
+</head>
+<body class="list">
+
+	<header class="caption">
+		<h1>rem vs em</h1>
+		<p></p>
+	</header>
+
+	<section class="slide cover" id="Cover"><div>
+		<p>by Artem Trgtsin</p>
+		<img src="pictures/cover.jpg" alt="" width="1024">
+	</div></section>
+	
+	<section class="slide few-content"><div>
+		<h2>The question is, what is the best or indeed the most useful?</h2>
+		<ul>
+			<li class="next"><b>EM</b> use the containers font size to calculate</li>
+			<li class="next"><b>REM</b> use the HTML font-size as the base to calculate</li>
+		</ul>
+	</div></section>
+
+
+	<section class="slide cover img_overflow"><div>
+		<img src="pictures/rem-support.png" alt="" width="1024">
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>Example</h2>
+		<pre>
+			<code><mark>&lt;div class="container"&gt;</mark> </code>
+			<code>    &lt;p class="first"> </code>
+			<code>		First Paragraph using EM's </code>
+			<code>	&lt;/p></code>
+			<code>    &lt;p class="second"> </code>
+			<code>  		Second Paragraph using REM's </code>
+			<code>	&lt;/p></code>
+			<code><mark>&lt;/div></mark></code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<p>CSS</p>
+		<pre>
+			<code><mark>html { font-size: 16px;}<mark></code>
+			<code>.container { font-size: 1.4em;}</code>
+			<code>p.first { font-size: <mark>1.4em;</mark>}</code>
+			<code>p.second { font-size: <mark>1.4rem;</mark>}</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Result</h2>
+		<p class="first-result">First Paragraph using EM's</p>
+		<p class="second-result">Second Paragraph using REM's</p>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>LESS mixins</h2>
+		<pre>
+			<code>html { font-size: 62.5%;}</code>
+			<code> </code>
+			<code>.font-size(<mark>@sizeValue</mark>) {</code>
+			<code>	@remValue: <mark>@sizeValue</mark>;</code>
+			<code>	@pxValue: (<mark>@sizeValue</mark> * 10);</code>
+			<code>	font-size: ~"@{pxValue}px"; </code>
+			<code>	font-size: ~"@{remValue}rem";</code>
+			<code>}</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Usage</h2>
+		<pre>
+			<code>p {</code>
+			<code>	.font-size(13); </code>
+			<code>}</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>The nice LESS mixins</h2>
+		<pre>
+			<code>html { font-size: 62.5%;}</code>
+			<code>.fontName (<mark>@size</mark>) { </code>
+			<code>	@remValue: <mark>@size</mark>;</code>
+			<code>	@pxValue: (<mark>@size</mark> * 10);</code>
+			<code>	font: ~"@{pxValue}px" fontName, sans-serif; </code>
+			<code>	font-size: ~"@{pxValue}px";</code>
+			<code>	font: ~"@{remValue}rem" fontName, sans-serif;</code>
+			<code>}</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Usage</h2>
+		<pre>
+			<code>p {</code>
+			<code>	.fontName(18); </code>
+			<code>}</code>
+			<code>p {</code>
+			<code>	font: 18px fontName, sans-serif;</code>
+			<code>	font-size: 18px;</code>
+			<code>	font: 1.8rem fontName, sans-serif;</code>
+			<code>}</code>
+		</pre>
+	</div></section>
+	
+	<section class="slide"><div>
+		<h2>And more...</h2>
+		<pre>
+		<code>.margin-bottom (@margin) {</code>
+		<code>	 @pxValue: (@margin * 10);</code>
+		<code>	 margin-bottom: ~"@{pxValue}px"; </code>
+		<code>	 margin-bottom: ~"@{margin}rem"; </code>
+		<code>}</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<ul>
+			<li>line-height</li>
+			<li>width, height, max-width, max-height</li>
+			<li>padding for buttons</li>
+			<li>position</li>
+			<li>...</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Media queries</h2>
+		<pre>
+			<code>@media only screen and (min-width: 1900px) {</code>
+			<code>	html, body { </code>
+			<code>		font-size: 80%;</code>
+			<code>	}</code>
+			<code>}</code>
+		</pre>
+	</div></section>
+
+	
+
+	<p class="badge"></p>
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+</body>
+</html>
