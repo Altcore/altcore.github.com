@@ -1,28 +1,31 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <meta charset=utf-8" />
+    <meta charset=utf-8
+    " />
     <title>JSON</title>
-    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
-    <link href="style.css" media="screen" rel="stylesheet" type="text/css" />	
-    <style>
-    body { width: 600px; margin:2px auto}    
-    </style> 
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <link href="style.css" media="screen" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-         <script type="text/javascript">
-            jQuery(document).ready(function(){
-                jQuery('#example-4').click(function(){
-                    jQuery.getJSON('ajax/example.json', {}, function(json){
-                        jQuery('#example-4').html('');
-                        jQuery('#example-4').append('To: '   + json.note.to + '<br/>')
-                                            .append('From: ' + json.note.from + '<br/>')
-                                            .append('<b>'    + json.note.heading + '</b><br/>')
-                                            .append(           json.note.body + '<br/>');
-                    });                
-                })
-            });
-        </script>   
-        <div class="example cursor" id="example-4">Click to load JSON data</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#example').on("click", function () {
+        $.getJSON('ajax/example.json', {}, function (json) {
+            var item = $('<div></div>');
+            $('<h3>'+'To: ' +json.note.to+'</h3>').appendTo(item);
+            $('<h3>'+'From: ' +json.note.from+'</h3>'+ '<br/>').appendTo(item);
+            $('<p>'+'Note: ' +json.note.body+'</p>').appendTo(item);
+
+            $("#example").detach();
+            $('.status-list').html(item);
+        });
+    })
+});
+
+</script>
+<div class="example" id="example">Read mail</div>
+<div class="status-list"></div>
 </body>
 </html>
