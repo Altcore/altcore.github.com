@@ -1,0 +1,204 @@
+// Grid
+@grid-width: 950;
+@grid-gutter-width: 25;
+@base-line: 1.65em;
+
+.arrow-top(@color: #fff, @size: 5px, @left: 5px) {
+	&:after {
+		bottom: 100%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-bottom-color: @color;
+		border-width: @size;
+		left: @left;
+	}
+}
+.arrow-bottom(@color: #fff, @size: 5px, @left: 5px) {
+	&:after {
+		top: 100%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-top-color: @color;
+		border-width: @size;
+		left: @left;
+	}
+}
+.arrow-left(@color: #fff, @size: 5px, @top: 5px) {
+	&:after {
+		right: 100%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-right-color: @color;
+		border-width: @size;
+		top: @top;
+	}
+}
+.arrow-right(@color: #fff, @size: 5px, @top: 5px) {
+	&:after {
+		left: 100%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-left-color: @color;
+		border-width: @size;
+		top: @top;
+	}
+}
+
+.placeholder(@rules) {
+	&::-webkit-input-placeholder {
+	@rules();
+	}
+	&:-moz-placeholder {
+	@rules();
+	}
+	&::-moz-placeholder {
+	@rules();
+	}
+	&:-ms-input-placeholder {
+	@rules();
+	}
+}
+
+// Grid
+.block(@num) {
+	width: ((@grid-width - (@grid-gutter-width * @num)) / @num / (@grid-width / 100)) * 1%;
+}
+
+.column(@num) {
+	width: ((@grid-width - (@grid-gutter-width * (@num - 1))) / @num / (@grid-width / 100)) * 1%;
+}
+
+.columns(@factor, @num) {
+	width: (((@grid-width - (@grid-gutter-width * (@num - 1))) / @num / (@grid-width / 100)) * @factor) + ((@grid-gutter-width / (@grid-width / 100)) * (@factor - 1)) * 1%;
+}
+
+.column-push(@num) {
+	left: (((@grid-width - (@grid-gutter-width * (@num - 1))) / @num / (@grid-width / 100)) + @grid-gutter-width/(@grid-width/100)) * 1%;
+}
+
+.columns-push(@factor, @num) {
+	left: ((((@grid-width - (@grid-gutter-width * (@num - 1))) / @num / (@grid-width / 100)) * @factor) + ((@grid-gutter-width / (@grid-width / 100)) * (@factor - 1)) + @grid-gutter-width/(@grid-width/100)) * 1%;
+}
+
+/* Responsive Tables */
+.table-container {
+    width: 100%;
+    overflow: auto;
+    margin-bottom: @base-line;
+    & table {
+        margin-bottom: 0;
+    }
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 14px;
+        height: 14px;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        border: 3px solid #fff;
+        background-color: rgba(0, 0, 0, .3);
+    }
+}
+
+/* Responsive embedded objects */
+.video-wrapper {
+    height: 0;
+    padding-bottom: 56.25%; // ratio 16:9
+    position: relative;
+    margin-bottom: @base-line;
+    & iframe,
+    & object,
+    & embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+/* =Line height and margin
+-----------------------------------------------------------------------------*/
+p,
+ul,
+ol,
+dl,
+dd,
+dt,
+blockquote,
+td,
+th {
+    line-height: @base-line;
+}
+
+/* Responsive media */
+img,
+video,
+audio,
+embed,
+object {
+    max-width: 100%;
+}
+
+img,
+video,
+embed,
+object {
+    height: auto;
+}
+
+embed,
+object {
+    height: 100%;
+}
+
+img {
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+}
+
+/* =Form
+-----------------------------------------------------------------------------*/
+button:active,
+button:focus {
+    outline: none;
+}
+textarea,
+select {
+    box-shadow: none;
+}
+
+* {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

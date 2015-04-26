@@ -1,0 +1,85 @@
+
+//---------- Tip ----------//
+.tooltip {
+	background: #fff;
+	border: 1px solid #000;
+	padding: 1rem 3rem 1rem 1rem;
+	position: relative;
+    &:before{
+        content: '';
+        left: 50%;
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        transform: translateX(-50%);
+        border: solid transparent;
+        border-bottom-color: #fff;
+        border-width: 6px;
+        top: -12px;
+    }
+    &_border{
+        &:before,
+        &:after {
+            content: '';
+            left: 50%;
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            transform: translateX(-50%);
+        }
+        &:before {
+            border: solid transparent;
+            border-bottom-color: #000;
+            border-width: 7px;
+            top: -14px;
+        }
+        &:after {
+            border: solid transparent;
+            border-bottom-color: #fff;
+            border-width: 6px;
+            top: -12px;
+        }
+    }
+	&__link {
+		.helvetica(1.2);
+		font-weight: bold;
+		display: inline-block;
+		margin-top: 0.5rem;
+		position: relative;
+		padding-right: 0.6rem;
+		&_right-arrow {
+			.arrow-right(#000, 3px, 5px);
+		}
+	}
+	&_gray {
+		border: none;
+		background: @gray-light;
+		margin-top: -5px;
+		padding: 0.5rem;
+		&:before {
+			display: none;
+		}
+	}
+}
+
+
+//---------- Breakpoints ----------//
+@media @mobile {
+    .tooltip {
+        &_border{
+            &:before{
+                right: 12px;
+            }
+            &:after{
+                right: 13px;
+            }
+            &:before,
+            &:after {
+                left: auto;
+                transform: none;
+            }
+        }
+    }
+}

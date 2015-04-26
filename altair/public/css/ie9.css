@@ -1,0 +1,44 @@
+.search-autocomplete ul .search-autocomplete__item.ui-state-focus .search-autocomplete__name {
+    font-weight: normal !important;
+}
+.search-autocomplete ul .search-autocomplete__item.ui-state-focus .search-autocomplete__subname {
+    font-weight: normal !important;
+}
+.search-autocomplete ul .search-autocomplete__item.ui-state-focus .search-autocomplete__price {
+    font-weight: normal !important;
+}
+.form__select {
+    padding: 0;
+}
+.form__label_for-checkbox {
+    position: relative;
+    top: -3px;
+}
+/*button[disabled] {*/
+    /*background-color: #fff !important;*/
+    /*border:none;*/
+    /*color: #000;*/
+/*}*/
+
+.opc form .success-coupon-block {
+    padding-top: 0;
+}
+.opc .coupon-cart-link__w {
+    margin-bottom: 1rem;
+}
+.reviews-list-tags__state-label {
+    position: relative;
+    top: -3px;
+}
+.header-menu__list {
+    display: table;
+}
+.header-menu__item {
+    display: table-cell;
+}
+.footer-links ul {
+    display: table;
+}
+.footer-links ul li {
+    display: table-cell;
+}
